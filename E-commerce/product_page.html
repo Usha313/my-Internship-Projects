@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.all-free-download.com/images/graphiclarge/blue_abstract_background_310971.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+ 
+background-color: rgba(0, 0, 0, 0);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+
+    .product-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      margin: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Product image styling */
+    .product-image {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+
+    /* Product details styling */
+    .product-details {
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .product-description {
+      margin: 10px 0;
+    }
+
+    .product-price {
+      font-size: 18px;
+    }
+
+    .quantity-input {
+      width: 40px;
+    }
+
+
+    .cart-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cart-button:hover {
+      background-color: #0056b3;
+    }
+
+
+    .cart-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      display: none;
+    }
+
+    .cart-popup.show {
+      display: block;
+    }
+    .view-cart-button {
+      display: block;
+      margin: 20px auto;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .view-cart-button:hover {
+      background-color: #0056b3;
+    }
+
+    .cart-summary {
+      display: none;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shop The Latest Trends..</h1>
+
+    <div class="product-container" data-product="1">
+      <div class="product-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgUNMzE7a_hJAmCGQvzLGH_cuwzPziqGhdnw&usqp=CAU" alt="Product 1 Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Hand Bag</h2>
+        <p class="product-description">
+Carry elegance with you – shop our handbag collection today!</p>
+        <p class="product-price">$299.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(1)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-container" data-product="2">
+      <div class="product-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyRT9IB9A5zG45LTPQt3AX7ODNdK857XoCBXf7hvyBvE5gG9MIw7N4ULxAsl-wclyfUZ0&usqp=CAU" alt="Product 2 Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Foot Wear</h2>
+        <p class="product-description">Step into Comfort and Style with Our Sandal Collection</p>
+        <p class="product-price">$199.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(2)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-container" data-product="3">
+      <div class="product-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-q3ZVn5-owCEv1jdkz6nrtwxUTnknPu_Fy0HvdJQo-298aM8bhMwk3NismTRCxBo7fBY&usqp=CAU" alt="Product 3 Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Necklace set</h2>
+        <p class="product-description">Glamour That Shines</p>
+        <p class="product-price">$659.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(3)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-container" data-product="4">
+      <div class="product-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZpFmE1HesYNsuPGvp37b3wq6hj0Yhej6atZiiDToZ1Zz2ef3pWExmA4N57hi7LoTmr4Q&usqp=CAU" alt="Product 4 Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Smart Watches</h2>
+        <p class="product-description">Stay Connected, Stay Stylish: Explore Our Smartwatch Collection</p>
+        <p class="product-price">$1579.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(4)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-container" data-product="5">
+      <div class="product-image">
+        <img src="data:image/jpeg;base64,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" alt="Product 5 Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Wallet for men</h2>
+        <p class="product-description">"Elevate your style and convenience with our sophisticated men's purses and wallets – a perfect blend of fashion and functionality.</p>
+        <p class="product-price">$189.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(5)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="cart-popup" id="cartPopup">
+      <p>Item added to cart successfully!</p>
+    </div>
+
+    <button class="view-cart-button" onclick="viewCart()">View Cart</button>
+
+    <div class="cart-summary" id="cartSummary">
+      <h2>Cart Summary</h2>
+      <ul id="cartItems">
+        <!-- Cart items will be added here dynamically -->
+      </ul>
+      <p>Total Price: $<span id="totalPrice">0.00</span></p>
+    </div>
+  </div>
+
+  <script>
+    let cart = [];
+
+    function addToCart(productId) {
+      const quantity = parseInt(document.querySelector(`.product-container[data-product="${productId}"] .quantity-input`).value);
+      const productTitle = document.querySelector(`.product-container[data-product="${productId}"] .product-title`).textContent;
+      const productPrice = parseFloat(document.querySelector(`.product-container[data-product="${productId}"] .product-price`).textContent.replace('$', ''));
+
+      const itemTotal = quantity * productPrice;
+      cart.push({ productTitle, quantity, itemTotal });
+
+      document.getElementById("cartPopup").classList.add("show");
+
+      setTimeout(function () {
+        document.getElementById("cartPopup").classList.remove("show");
+      }, 2000);
+    }
+
+    function viewCart() {
+      const cartItems = document.getElementById("cartItems");
+      const totalPrice = document.getElementById("totalPrice");
+
+      cartItems.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.productTitle} - Quantity: ${item.quantity}, Total: $${item.itemTotal.toFixed(2)}`;
+        cartItems.appendChild(li);
+        total += item.itemTotal;
+      });
+
+      totalPrice.textContent = total.toFixed(2);
+
+      document.getElementById("cartSummary").style.display = "block";
+    }
+  </script>
+</body>
+</html>
