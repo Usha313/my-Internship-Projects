@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Eco-Essence Emporium</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-simple-blue-line-stripe-image_23421.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Adjust alpha (0.0 - 1.0) for transparency */
+            border-radius: 10px; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Styling for the contact form */
+        form {
+            padding: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #008cba;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f6b;
+        }
+
+        /* Styling for the success message */
+        .success-message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+ /* Navigation Buttons */
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #F26B8A;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .navigation a:hover {
+            background-color: #FC9483;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Eco-Essence Emporium</h1>
+<div class="navigation">
+            <a href="C:/Users/DELL/Desktop/creating%20web%20pages/hp.html#products">Homepage</a>
+            <a href="file:///C:/Users/DELL/Desktop/creating%20web%20pages/service.html">Shop Now/Products</a>
+            <a href="file:///C:/Users/DELL/Desktop/creating%20web%20pages/abt.html">About Us</a>
+            <a href="file:///C:/Users/DELL/Desktop/creating%20web%20pages/cnt.html">Contact</a>
+        </div>
+
+        <section>
+            <h2>Our Team</h2>
+            <p>Meet the passionate minds behind Eco-Essence Emporium. Our dedicated team is committed to providing you with sustainable and eco-friendly products while ensuring a delightful customer experience.</p>
+            <p>For inquiries or feedback, please reach out to our team via the form below.</p>
+        </section>
+
+        <section>
+            <h2>Feedback Form</h2>
+            <form id="feedbackForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="success-message" id="successMessage"></div>
+        </section>
+    </div>
+
+    <script>
+        const feedbackForm = document.getElementById("feedbackForm");
+        const successMessage = document.getElementById("successMessage");
+
+        feedbackForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // You can add your backend logic to handle the form submission here
+
+            // Display the success message
+            successMessage.textContent = "Feedback submitted successfully!";
+            feedbackForm.reset(); // Clear the form
+        });
+    </script>
+</body>
+
+</html>

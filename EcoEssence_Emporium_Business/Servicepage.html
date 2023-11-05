@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <style>
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://watermark.lovepik.com/photo/50018/0462.jpg_wh1200.jpg'); /* Add your background image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container styling */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+ 
+background-color: rgba(0, 0, 0, 0);
+    }
+
+    /* Heading styling */
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    /* Product container styling */
+    .product-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      margin: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Product image styling */
+    .product-image {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+
+    /* Product details styling */
+    .product-details {
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .product-description {
+      margin: 10px 0;
+    }
+
+    .product-price {
+      font-size: 18px;
+    }
+
+    .quantity-input {
+      width: 40px;
+    }
+
+    /* Add to Cart button styling */
+    .cart-button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cart-button:hover {
+      background-color: green;
+    }
+
+    /* Cart popup styling */
+    .cart-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      display: none;
+    }
+.buy-now-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-now-button:hover {
+  background-color: green;
+}
+
+
+    .cart-popup.show {
+      display: block;
+    }
+
+    /* View Cart button styling */
+    .view-cart-button {
+      display: block;
+      margin: 20px auto;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .view-cart-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Cart summary styling */
+    .cart-summary {
+      display: none;
+      margin-top: 20px;
+    }
+      /* Navigation Buttons */
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .navigation a:hover {
+            background-color: #808000;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shop for Sustainable Elegance..</h1>
+<div class="navigation">
+            <a href="C:/Users/DELL/Desktop/creating%20web%20pages/hp.html#products">Homepage</a>
+            <a href="file:///C:/Users/DELL/Desktop/creating%20web%20pages/service.html">Shop Now/Products</a>
+            <a href="file:///C:/Users/DELL/Desktop/creating%20web%20pages/abt.html">About Us</a>
+            <a href="file:///C:/Users/DELL/Desktop/creating%20web%20pages/cnt.html">Contact</a>
+        </div>
+
+    <div class="product-container" data-product="1">
+      <div class="product-image">
+        <img src="https://cometpackaging.co.uk/wp-content/uploads/2021/06/screen-printed-tote-shoppers.jpeg" alt="Product 1 Image" width="200" height="200">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Organic Cotton Tote Bags</h2>
+        <p class="product-description">
+ Durable tote bags made from 100% organic cotton.</p>
+<p> Perfect for grocery shopping, daily errands, or carrying essentials..</p>
+        <p class="product-price">$149.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(1)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-container" data-product="2">
+      <div class="product-image">
+        <img src="https://www.greenworx.in/cdn/shop/files/banner_1_mobile_size.png?v=1679981073&width=375" alt="Product 2 Image" width="200" height="200">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Cleaning Products</h2>
+        <p class="product-description"> Eco-friendly cleaning products made from plant-based ingredients.</p>
+<p> These products are biodegradable and free from harsh chemicals, promoting a healthier environment at home.</p>
+        <p class="product-price">$299.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(2)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-container" data-product="3">
+      <div class="product-image">
+        <img src="https://sc01.alicdn.com/kf/HTB1PwObRpXXXXbyXpXXq6xXFXXXe/201187813/HTB1PwObRpXXXXbyXpXXq6xXFXXXe.jpg" alt="Product 3 Image" width="200" height="200">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Organic Herbal Tea Products</h2>
+        <p class="product-description">
+ These teas products are sustainably sourced and offer a delightful, eco-friendly way to enjoy a soothing cup of tea.</p>
+        <p class="product-price">$199.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(3)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-container" data-product="4">
+      <div class="product-image">
+        <img src="https://nanocliq.in/wp-content/uploads/2023/04/LED-Solar-Garden-Lights-Outdoor-Solar-Powered-Lamp-Lantern-Waterproof-Landscape-Lighting-For-Pathway-Patio-Yard-1-600x600-1.png" alt="Product 4 Image" width="200" height="200">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Solar Powered LED Lamp Lights</h2>
+        <p class="product-description">Outdoor solar-powered LED lights for gardens and walkways. </p>
+<p>These energy-efficient lights harness solar energy during the day and illuminate your outdoor spaces at night without relying on electricity.</p>
+        <p class="product-price">$499.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(4)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-container" data-product="5">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/11/RP/GI/TL/140258896/natural-bamboo-tooth-brush.png" alt="Product 5 Image" width="200" height="200">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Bamboo Tooth Brushes</h2>
+        <p class="product-description"> Biodegradable toothbrushes with handles made from sustainable bamboo and BPA-free bristles.</p>
+<p> They are an excellent alternative to traditional plastic toothbrushes, reducing plastic waste and promoting oral hygiene</p>
+        <p class="product-price">$99.99</p>
+        <input type="number" class="quantity-input" value="1" min="1">
+        <button class="cart-button" onclick="addToCart(5)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="cart-popup" id="cartPopup">
+      <p>Item added to cart successfully!</p>
+    </div>
+
+    <button class="view-cart-button" onclick="viewCart()">View Cart</button>
+
+    <div class="cart-summary" id="cartSummary">
+      <h2>Cart Summary</h2>
+      <ul id="cartItems">
+        <!-- Cart items will be added here dynamically -->
+      </ul>
+      <p>Total Price: $<span id="totalPrice">0.00</span></p>
+<button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+    </div>
+  </div>
+<script>
+    let cart = [];
+
+    function addToCart(productId) {
+      const quantity = parseInt(document.querySelector(`.product-container[data-product="${productId}"] .quantity-input`).value);
+      const productTitle = document.querySelector(`.product-container[data-product="${productId}"] .product-title`).textContent;
+      const productPrice = parseFloat(document.querySelector(`.product-container[data-product="${productId}"] .product-price`).textContent.replace('$', ''));
+
+      const itemTotal = quantity * productPrice;
+      cart.push({ productTitle, quantity, itemTotal });
+
+      document.getElementById("cartPopup").classList.add("show");
+
+      setTimeout(function () {
+        document.getElementById("cartPopup").classList.remove("show");
+      }, 2000);
+    }
+ function buyNow() {
+      alert("Thanks for your purchase!");
+    }
+
+    function viewCart() {
+      const cartItems = document.getElementById("cartItems");
+      const totalPrice = document.getElementById("totalPrice");
+
+      cartItems.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.productTitle} - Quantity: ${item.quantity}, Total: $${item.itemTotal.toFixed(2)}`;
+        cartItems.appendChild(li);
+        total += item.itemTotal;
+      });
+
+      totalPrice.textContent = total.toFixed(2);
+
+      document.getElementById("cartSummary").style.display = "block";
+    }
+  </script>
+</body>
+</html>
