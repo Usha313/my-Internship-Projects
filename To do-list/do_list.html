@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+ 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    background-image: url('https://img.freepik.com/premium-photo/3d-neon-light-background-3d-rendering-strip-led-lighting_573921-903.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#task-form {
+    margin-bottom: 20px;
+}
+
+#task-input {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    background-color: white; /* Add background color for the task input */
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #993300;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.task-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-card {
+    background-color: #66cccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.task-card-content {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.edit,
+.select,
+.delete {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.edit:hover,
+.select:hover,
+.delete:hover {
+    color: #d35400; /* Change this color for hover effect */
+}
+</style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button onclick="addTask()"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="task-box" id="task-list"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
